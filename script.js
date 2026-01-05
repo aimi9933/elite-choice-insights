@@ -87,7 +87,7 @@ function renderOffers() {
                     <div class="w-full md:w-auto flex-shrink-0">
                         <button class="offer-btn w-full md:w-auto bg-gradient-to-r from-brand-600 to-brand-500 hover:from-brand-500 hover:to-brand-400 text-white font-bold py-3 px-8 rounded-xl shadow-lg transform transition active:scale-95 flex flex-col items-center justify-center min-w-[160px]"
                                 data-url="${offer.link}" data-id="${offer.id}" data-name="${offer.name}">
-                            <span class="text-lg leading-none">Visist Site</span>
+                            <span class="text-lg leading-none">Visit Site</span>
                             <span class="text-[10px] opacity-80 font-normal mt-1">Free Registration</span>
                         </button>
                     </div>
@@ -197,8 +197,18 @@ async function initPage() {
 window.addEventListener('pageshow', (event) => {
     document.querySelectorAll('.offer-btn').forEach(btn => {
         btn.disabled = false;
+        // Restore from saved state
         if (btn.dataset.originalContent) {
             btn.innerHTML = btn.dataset.originalContent;
+        }
+        // Fallback if state missing but button looks stuck
+        else if (btn.innerHTML.includes('...')) {
+            const isHero = btn.closest('.glass-panel').classList.contains('p-6'); // Crude check for hero
+            if (isHero) {
+                btn.innerHTML = `<span class="text-lg leading-none">Visit Site</span><span class="text-[10px] opacity-80 font-normal mt-1">Free Registration</span>`;
+            } else {
+                btn.innerHTML = 'View';
+            }
         }
     });
 });
