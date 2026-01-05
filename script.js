@@ -147,7 +147,9 @@ async function initPage() {
             const btnEl = e.currentTarget;
 
             // UI Feedback
-            const originalContent = btnEl.innerHTML;
+            if (!btnEl.dataset.originalContent) {
+                btnEl.dataset.originalContent = btnEl.innerHTML;
+            }
             btnEl.innerHTML = '<span class="animate-pulse">...</span>';
             btnEl.disabled = true;
 
@@ -190,5 +192,15 @@ async function initPage() {
         });
     });
 }
+
+// Reset buttons on page show (handles Back/Forward cache)
+window.addEventListener('pageshow', (event) => {
+    document.querySelectorAll('.offer-btn').forEach(btn => {
+        btn.disabled = false;
+        if (btn.dataset.originalContent) {
+            btn.innerHTML = btn.dataset.originalContent;
+        }
+    });
+});
 
 initPage();
