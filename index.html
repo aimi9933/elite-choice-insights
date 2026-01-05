@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO & Metadata -->
+    <title>Top 5 Dating Sites 2026 - Find Love & Fun</title>
+    <meta name="description"
+        content="We reviewed the best dating sites. Find verified singles in your area tonight. Safe and secure.">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            500: '#E11D48',
+                            600: '#BE123C',
+                            900: '#0f0f0f',
+                            800: '#1a1a1a'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(30, 30, 30, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), #000), url('https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header / Hero -->
+    <header class="hero-bg py-12 px-4 text-center relative">
+        <div class="max-w-2xl mx-auto z-10 relative">
+            <div class="inline-block bg-brand-600 text-xs font-bold px-2 py-1 rounded mb-3">UPDATED: JAN 2026</div>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-2">
+                Best <span class="text-brand-500">Dating Review</span>
+            </h1>
+            <p class="text-gray-300 text-sm md:text-base">
+                We tested 50+ sites to find the best places for meaningful connections.
+                <span class="text-green-400 font-bold">1,204 users online now.</span>
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content: Offer List -->
+    <main id="offer-list-container" class="flex-grow max-w-2xl mx-auto w-full px-4 -mt-8 pb-20 z-20 relative space-y-4">
+        <!-- Content will be injected by script.js -->
+        <div class="text-center text-gray-500 py-10">Loading best offers...</div>
+    </main>
+
+    <!-- Compliance Footer -->
+    <footer class="py-8 text-center text-xs text-gray-600 border-t border-gray-900 bg-black">
+        <p class="mb-4 uppercase tracking-widest text-[10px]">18+ Only • Dating Service Reviews • Discreet</p>
+        <div class="flex justify-center space-x-4 mb-4">
+            <a href="/privacy.html" class="hover:text-gray-400" target="_blank">Privacy Policy</a>
+            <span>|</span>
+            <a href="/terms.html" class="hover:text-gray-400" target="_blank">Terms of Use</a>
+            <span>|</span>
+            <a href="mailto:contact@example.com" class="hover:text-gray-400">Contact</a>
+        </div>
+        <p>&copy; 2026 ReviewMedia Inc. All rights reserved.</p>
+    </footer>
+
+    <!-- App Logic -->
+    <!-- Define ENV for script.js to pick up logic config if needed, though mostly using offers.config now -->
+    <script>
+        window.ENV = {
+            OFFER_URL: "LIST_MODE", // Signal to script to use list mode
+            // Firebase Config Placeholders (Same as before)
+            FIREBASE_CONFIG: {
+                apiKey: "process.env.FIREBASE_API_KEY",
+                authDomain: "process.env.FIREBASE_AUTH_DOMAIN",
+                projectId: "process.env.FIREBASE_PROJECT_ID",
+                storageBucket: "process.env.FIREBASE_STORAGE_BUCKET",
+                messagingSenderId: "process.env.FIREBASE_MESSAGING_SENDER_ID",
+                appId: "process.env.FIREBASE_APP_ID"
+            }
+        };
+    </script>
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>
